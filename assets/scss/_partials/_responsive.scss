@@ -1,0 +1,10 @@
+@include minbreakpoint(sm) {
+	.container{
+		width: 85%;
+	}
+	.breadcrumb-wrapper ,.breadcrumb-wrapper .cplus-breadcrumb{
+		text-align: center;
+	}
+
+}
+

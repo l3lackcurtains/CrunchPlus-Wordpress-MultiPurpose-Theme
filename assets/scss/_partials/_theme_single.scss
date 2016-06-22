@@ -1,0 +1,104 @@
+.comments-area{
+    padding: 60px 0;
+}
+
+.comment-list{
+    list-style-type: none;
+    .pull-left{
+        margin-right: 24px;
+        position: relative;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            width: 64px;
+            height: 64px;
+        }
+
+    }
+    .media-body{
+        background: #fff;
+        padding: 16px;
+        @include box-shadow(1px 1px 5px rgba(#191919,0.1));
+        .comment-heading{
+            padding-bottom: 8px;
+        }
+    }
+    li{
+        margin: 32px 0;
+        position: relative;
+        overflow: hidden;
+        border-left: 1px solid #e3e3e3;
+        padding-left: 16px;
+        .children{
+            list-style-type: none;
+            li{
+                margin: 32px 0;
+                position: relative;
+                overflow: hidden;
+                border-left: 1px solid #e3e3e3;
+                padding-left: 16px;
+            }
+        }
+    }
+    .comment-reply{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 14px;
+        a{
+            background: #dcdee4;
+            padding: 4px 8px;
+            &:hover{
+                color: $color9;
+                background: $primary_accent1;
+            }
+        }
+    }
+    .comment-awaiting-moderation{
+        font-size: 14px;
+        opacity: .5;
+    }
+}
+
+
+.comment-respond{
+    label{
+        width: 100%;
+        margin: 16px 0;
+    }
+    textarea{
+        border: 2px solid #dcdee4;
+        padding: 8px;
+        border-radius: 3px;
+        background: none;
+        &:focus{
+            background: #fff;
+            border: 2px solid $primary_accent1;
+        }
+    }
+    input{
+        width: 100%;
+        border: 2px solid #dcdee4;
+        padding: 8px;
+        border-radius: 3px;
+        background: none;
+        &:focus{
+            background: #fff;
+            border: 2px solid $primary_accent1;
+        }
+    }
+    .submit{
+        border: 0;
+        width: 150px;
+        margin: 16px 0;
+        padding: 8px 16px;
+        background: #dcdee4;
+        @include transition(all .2s ease-in);
+        &:hover{
+            background: $primary_accent1;
+            color: $color9;
+        }
+    }
+}

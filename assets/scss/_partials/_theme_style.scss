@@ -1,0 +1,212 @@
+// Fonts include
+@font-face {
+  font-family: 'lato';
+  src: url('assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'raleway';
+  src: url('assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+// MAin styles
+body{
+	font-family: $main_font;
+	font-size: 15px;
+	line-height: 25px;
+	color: #292f33;
+	background: #f7f7f7;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: $title_font2;
+}
+
+
+
+
+p{
+	font-family: $main_font;
+	font-size: 15px;
+	line-height: 20px;
+	color: #292f33;
+}
+a{
+	color: $link_color1;
+	@include transition(all .2s $ease-in-quad);
+	&:hover, &:focus, &:active{
+		color: $link_color1_hover;
+		text-decoration: none;
+	}
+}
+input{
+	&:focus{
+		outline: none;
+	}
+}
+// NavBar
+.header-top-bar{
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	height: 80px;
+	background: $primary_accent1;
+	padding: 16px 0;
+}
+.header-top-bar.attach{
+	@include card(1);
+	background: $primary_accent1;
+}
+
+// main content
+.main-wrapper{
+	padding-top: 80px;
+}
+
+// Breadcrumb
+.breadcrumb-wrapper{
+	padding: 80px 0;
+	@include radial-gradient($color6, $color7);
+	.breadcrumb-title{
+		text-transform: uppercase;
+		font-weight: 100;
+	}
+	.cplus-breadcrumb{
+		padding: 16px 0px;
+		font-size: 20px;
+		text-align: right;
+		list-style-type: none;
+		li{
+			display: inline-block;
+			&:after{
+				content: "/";
+				opacity: .6;
+				padding: 0 4px;
+			}
+			&:last-child{
+				&:after{
+					content: "";
+				}
+			}
+		}
+	}
+}
+.cplus_sep{
+	width: 10%;
+	height: 2px;
+	margin: 16px 0;
+	background: $primary_color1;
+}
+// Page pagigation
+.cplus-pagination{
+	text-align: center;
+	margin: 40px;
+	.page-numbers{
+		list-style-type: none;
+		li{
+			margin-right: -6px;
+			display: inline-block;
+			a{
+				padding: 12px 16px;
+				border: 1px solid $color6;
+				background: $color9;
+				color: $link_color1;
+				&:hover{
+					color: $link_color1_hover;
+					background: $color8;
+				}
+			}
+			span{
+				padding: 12px 16px;
+				color: $color9;
+				background: $primary_accent1;
+			}
+		}
+	}
+}
+
+// Blog Post classic
+.blog_post_classic{
+	margin: 32px 0;
+	padding: 16px;
+	background: #fff;
+	@include box-shadow(1px 1px 5px rgba(#191919,0.1));
+	// entry meta
+	.entry-meta{
+		font-size: 16px;
+		opacity: .7;
+	}
+	.post-thumbnail{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		max-height: 450px;
+		img{
+				width: 100%;
+			}
+	}
+}
+// Footer wrapper
+.footer-top-wrapper{
+	padding: 80px 0;
+	background: #222;
+}
+.footer-bottom-wrapper{
+	padding: 32px 0;
+	text-align: center;
+	background: $color0;
+	.site-info{
+		color: $color6;
+		a{
+			color: $link_color2;
+			&:hover{
+				color: $link_color2_hover;
+			}
+		}
+	}
+}
+
+// Widgets styling
+.widget-title{
+	font-size: 15px;
+	@include fweight(2);
+	text-transform: uppercase;
+	@include lspace(1);
+}
+.footer-widget, .sidebar-widget{
+	ul{
+		list-style-type: none;
+		padding: 0;
+		margin-top: 24px;
+		li{
+			margin: 2px 0;
+			padding: 4px 0;
+			color: #868686;
+			&:before{
+				content: "\f105";
+				font-family: "FontAwesome";
+				padding-right: 8px;
+			}
+		}
+	}
+}
+// footer widget fixes
+.footer-widget{
+	.widget-title{
+		color: #fff;
+	}
+	ul>li{
+			a{
+				color: #868686;
+			&:hover{
+				color: #4A63DA;
+			}
+			&:hover{
+				&:before{
+					color: #4A63DA;
+				}
+			}
+		}
+	}
+}
